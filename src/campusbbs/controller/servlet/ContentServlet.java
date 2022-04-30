@@ -1,6 +1,12 @@
 package campusbbs.controller.servlet;
 
-import java.io.IOException;
+import campusbbs.model.bean.*;
+import campusbbs.model.factory.BeanFactory;
+import campusbbs.model.service.PageService;
+import campusbbs.model.service.UserService;
+import campusbbs.model.vo.Post;
+import campusbbs.model.vo.Reply;
+import campusbbs.model.vo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,21 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import campusbbs.model.bean.ClubEditBean;
-import campusbbs.model.bean.ClubListBean;
-import campusbbs.model.bean.HomeBean;
-import campusbbs.model.bean.LastPostBean;
-import campusbbs.model.bean.ListBean;
-import campusbbs.model.bean.PostBean;
-import campusbbs.model.bean.RegistBean;
-import campusbbs.model.bean.UserInfoBean;
-import campusbbs.model.factory.BeanFactory;
-import campusbbs.model.service.PageService;
-import campusbbs.model.service.UserService;
-import campusbbs.model.vo.Post;
-import campusbbs.model.vo.Reply;
-import campusbbs.model.vo.User;
+import java.io.IOException;
 
 /**
  * Servlet implementation class ContentServlet
@@ -308,7 +300,7 @@ public class ContentServlet extends HttpServlet {
 				if(clubName==null||clubName.trim().isEmpty()){
 					return null;
 				}
-				clubName=new String(clubName.getBytes("ISO8859-1"),"utf-8");
+//				clubName=new String(clubName.getBytes("ISO8859-1"),"utf-8");
 			}
 			System.out.println("clubName == "+clubName);
 			return clubName;

@@ -467,7 +467,7 @@ function mOut(obj){
 								<div style="float: left;line-height: 30px;border: 1px solid gray;width: 50px;text-align: center;">
 									<span style="line-height: 30px;">标题</span>
 								</div>
-								<div style="float: left;line-height: 32px; 80px;margin:0px 10px; height:32px; text-align: center;">
+								<div style="float: left;line-height: 32px; margin:0px 10px; height:32px; text-align: center;">
 								
 									<select name="postTypeId" style="line-height: 32px; height: 32px;width: 80px;">
 										<c:forEach var="id" items="${ clubBean.postTypeIdList }">			
